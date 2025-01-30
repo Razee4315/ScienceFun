@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Science Fun - Explore the Wonders of Science</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+  <script defer src="sketch.js"></script>
+  <script src="ui-components.js"></script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">ScienceFun</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="physics.html">Physics</a></li>
+      <li><a href="chemistry.html">Chemistry</a></li>
+      <li><a href="biology.html">Biology</a></li>
+    </ul>
+    <button id="dark-mode-toggle" class="dark-mode-button">Dark Mode</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <div id="p5-canvas-container"></div>
+    <div class="hero-content">
+      <h1>Welcome to Science Fun</h1>
+      <p>Explore the wonders of science through interactive experiments, animations, and educational content.</p>
+      <a href="#experiments" class="cta-button">Get Started</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>
+      At Science Fun, we believe that learning science should be exciting and accessible to everyone. Our mission is to inspire curiosity and creativity by providing interactive tools, animations, and resources for students, educators, and science enthusiasts.
+    </p>
+  </section>
+
+  <!-- Experiments Section -->
+  <section id="experiments" class="section">
+    <h2>Interactive Experiments</h2>
+    <div class="experiment-grid">
+      <div class="experiment-card">
+        <h3>Physics Simulations</h3>
+        <p>Explore the laws of motion, gravity, and collisions with our physics-based simulations.</p>
+        <a href="physics.html" class="learn-more">Learn More</a>
+      </div>
+      <div class="experiment-card">
+        <h3>Chemistry Visualizations</h3>
+        <p>Visualize molecular structures, reactions, and periodic trends in an interactive way.</p>
+        <a href="chemistry.html" class="learn-more">Learn More</a>
+      </div>
+      <div class="experiment-card">
+        <h3>Biology Explorations</h3>
+        <p>Dive into the world of cells, ecosystems, and genetics with hands-on activities.</p>
+        <a href="biology.html" class="learn-more">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="submit-button">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Science Fun. All rights reserved.</p>
+    <p>Made with ❤️ By Saqlain Abbas (github: Razee4315).</p>
+  </footer>
+
+  <script>
+    // Dark Mode Toggle
+    document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    // Hide Loading Screen on Page Load
+    window.addEventListener('load', () => {
+      document.getElementById('loading-screen').style.display = 'none';
+    });
+  </script>
+</body>
+</html>

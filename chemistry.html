@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemistry Visualizations - Science Fun</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+  <script defer src="chemistry-sketch.js"></script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">ScienceFun</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="physics.html">Physics</a></li>
+      <li><a href="chemistry.html">Chemistry</a></li>
+      <li><a href="biology.html">Biology</a></li>
+    </ul>
+    <button id="dark-mode-toggle" class="dark-mode-button">Dark Mode</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div id="p5-canvas-container"></div>
+    <div class="hero-content">
+      <h1>Chemistry Visualizations</h1>
+      <p>Visualize molecular structures, reactions, and periodic trends in an interactive way.</p>
+    </div>
+  </header>
+
+  <!-- Content Section -->
+  <section class="section">
+    <h2>Featured Chemistry Experiments</h2>
+    <div class="experiment-grid">
+      <div class="experiment-card">
+        <h3>Molecular Bonds</h3>
+        <p>Explore covalent, ionic, and metallic bonds.</p>
+      </div>
+      <div class="experiment-card">
+        <h3>Periodic Table Trends</h3>
+        <p>Understand atomic radius, electronegativity, and ionization energy.</p>
+      </div>
+      <div class="experiment-card">
+        <h3>Chemical Reactions</h3>
+        <p>Simulate acid-base reactions, combustion, and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Science Fun. All rights reserved.</p>
+    <p>Made with ❤️ By Saqlain Abbas (github: Razee4315).</p>
+  </footer>
+
+  <script>
+    // Dark Mode Toggle
+    document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    // Hide Loading Screen on Page Load
+    window.addEventListener('load', () => {
+      document.getElementById('loading-screen').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
