@@ -110,7 +110,7 @@ body.dark-mode footer {
 .dark-mode-button {
   padding: 0.5rem 1rem;
   background-color: #ffcc00;
-  color: #cacaca;
+  color: #000000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
